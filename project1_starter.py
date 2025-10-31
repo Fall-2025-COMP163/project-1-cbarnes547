@@ -1,7 +1,29 @@
 """
 COMP 163 - Project 1: Character Creator & Saving/Loading
-Name: [Your Name Here]
-Date: [Date]
+Name: Chloe Barnes
+Date: 10/31/2025
+
+AI Usage: [Document any AI assistance used] 
+I used AI (ChatGPT) to help write lines 106 and 107. These lines determine the directory from a file path and then check if that directory exists on the file system.
+I used AI (Gemini) to generate character backstories.
+i used AI (Gemini) to help me create clear variable names.
+"""
+
+"""
+TA Elias:
+first issue: no virtual env:
+    (cmd + shift + p)
+    python create environment
+    select recommended if there is one else pick the global one
+    activate venv: path/to/activate/executable
+    install libs: like this pip/pip3 install lib_name
+
+to run the tests:
+    python -m pytest
+
+
+"""
+import os
 
 AI Usage: [Document any AI assistance used]
 Example: AI helped with file I/O error handling logic in save_character function
@@ -170,6 +192,17 @@ def display_character(character):
     print(f"Equipment: {character['equipment']}")
     print(f"Backstory: {character['backstory']}")
 
+    print("=== CHARACTER SHEET ===")
+    print(f"Name: {character['name']}")
+    print(f"Class: {character['class']}")
+    print(f"Level: {character['level']}")
+    print(f"Strength: {character['strength']}")
+    print(f"Magic: {character['magic']}")
+    print(f"Health: {character['health']}")
+    print(f"Gold: {character['gold']}")
+    print(f"Equipment: {character['equipment']}")
+    print(f"Backstory: {character['backstory']}")
+
 
 def level_up(character):
         # add one to the level
@@ -189,6 +222,9 @@ def level_up(character):
 if __name__ == "__main__":
     print("=== CHARACTER CREATOR ===")
     print("Test your functions here!")
+    
+    char = create_character("TestHero", "Warrior")
+    display_character(char)
     
     char = create_character("TestHero", "Warrior")
     display_character(char)
